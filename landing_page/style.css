@@ -1,0 +1,97 @@
+/* paleta*/
+:root {
+  --dark-blue: #0b1c35;
+  --light-blue: #00e0ff;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+/* tipogafia */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: var(--white);
+}
+
+/*  Animacines = */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/*buttons*/
+.btn {
+  background-color: var(--light-blue);
+  color: var(--black);
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00bcd4;
+}
+
+/*tin y tan */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #1f2937; /* gray-800 */
+  color: var(--white);
+  outline: none;
+  border: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px var(--light-blue);
+}
+
+
+.bg-gradient-electric {
+  background: linear-gradient(to right, var(--dark-blue), var(--black), var(--dark-blue));
+}
+
+.text-electric {
+  color: var(--light-blue);
+}
+
+.shadow-electric {
+  box-shadow: 0 4px 20px rgba(0, 224, 255, 0.5);
+}
+
+/* la pata */
+footer {
+  background-color: var(--black);
+  color: #9ca3af; /* gray-400 */
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
+}
+/* boton de carrito */
+.btn-electric {
+  background: linear-gradient(to right, #00e0ff, #0b1c35);
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 224, 255, 0.5);
+}
+
+.btn-electric:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 224, 255, 0.6);
+}
+
+.btn-electric:active {
+  transform: scale(0.95);
+}

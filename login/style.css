@@ -1,0 +1,27 @@
+.btn-electric {
+  background-color: #0b1c35; 
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-electric:hover {
+  background-color: #00e0ff; 
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00e0ff; 
+}
+
+.btn-electric:active {
+  transform: scale(0.95);
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
