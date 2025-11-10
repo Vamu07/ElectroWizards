@@ -22,7 +22,6 @@ $nombre = $_SESSION['nombre'];
 
   <!-- Navbar -->
   <header class="bg-[#0b1c35] text-white flex justify-between items-center px-6 py-4 shadow-md">
-    <!-- 🔗 Logo con enlace a la landing page -->
     <a href="../landing_page/index.php" class="flex items-center space-x-2 hover:scale-105 transition-transform duration-200">
       <h1 class="text-2xl font-bold text-[#00e0ff] cursor-pointer">⚡ Electro Wizard</h1>
     </a>
@@ -66,7 +65,38 @@ $nombre = $_SESSION['nombre'];
 
       <?php 
       if(!isset($_GET['view'])) { 
-        include "vistas/home_cliente.php";
+      ?>
+      <!-- 🟢 Pantalla de inicio del cliente -->
+      <h2 class="text-3xl font-bold text-[#0b1c35] mb-3">Bienvenido, <?php echo htmlspecialchars($nombre); ?> 👋</h2>
+      <p class="text-lg text-gray-700 mb-8">Desde tu panel puedes gestionar tus compras, pedidos y tu perfil personal.</p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Tarjeta: Mi Carrito -->
+        <a href="dashboard_cliente.php?view=carrito" 
+           class="bg-white border rounded-xl p-6 shadow hover:shadow-xl transition hover:-translate-y-1">
+          <div class="text-4xl mb-3">🛒</div>
+          <h3 class="text-xl font-semibold text-[#0b1c35] mb-2">Mi Carrito</h3>
+          <p class="text-gray-600">Revisa los productos añadidos y finaliza tus compras fácilmente.</p>
+        </a>
+
+        <!-- Tarjeta: Mis Pedidos -->
+        <a href="dashboard_cliente.php?view=pedidos" 
+           class="bg-white border rounded-xl p-6 shadow hover:shadow-xl transition hover:-translate-y-1">
+          <div class="text-4xl mb-3">📦</div>
+          <h3 class="text-xl font-semibold text-[#0b1c35] mb-2">Mis Pedidos</h3>
+          <p class="text-gray-600">Consulta el estado y el historial de tus pedidos realizados.</p>
+        </a>
+
+        <!-- Tarjeta: Mi Perfil -->
+        <a href="dashboard_cliente.php?view=perfil" 
+           class="bg-white border rounded-xl p-6 shadow hover:shadow-xl transition hover:-translate-y-1">
+          <div class="text-4xl mb-3">👤</div>
+          <h3 class="text-xl font-semibold text-[#0b1c35] mb-2">Mi Perfil</h3>
+          <p class="text-gray-600">Edita tus datos personales y cambia tu contraseña.</p>
+        </a>
+      </div>
+
+      <?php 
       } else {
         $vista = $_GET['view'];
         $archivo = "vistas/" . $vista . ".php";
